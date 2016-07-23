@@ -11,4 +11,4 @@ RUN apt-get install -y software-properties-common && \
     apt-get clean
 
 #set timezone
-RUN echo Europe/Athens | tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata
+RUN ln -sf /usr/share/zoneinfo/Europe/Athens /etc/localtime
